@@ -1,5 +1,6 @@
 gui:
-  authorColors: {}
+  authorColors:
+    "*": "#b4befe"
   branchColors: {}
   branchColorPatterns: {}
   customIcons:
@@ -26,31 +27,24 @@ gui:
   shortTimeFormat: 3:04PM
   theme:
     activeBorderColor:
-      - green
+      - "#cba6f7"
       - bold
     cherryPickedCommitBgColor:
-      - cyan
+      - "#45475a"
     cherryPickedCommitFgColor:
-      - blue
+      - "#cba6f7"
     defaultFgColor:
-      - default
+      - "#cdd6f4"
     inactiveBorderColor:
-      - default
-    inactiveViewSelectedLineBgColor:
-      - bold
-    markedBaseCommitBgColor:
-      - yellow
-    markedBaseCommitFgColor:
-      - blue
+      - "#a6adc8"
     optionsTextColor:
-      - blue
+      - "#89b4fa"
     searchingActiveBorderColor:
-      - cyan
-      - bold
+      - "#f9e2af"
     selectedLineBgColor:
-      - blue
+      - "#313244"
     unstagedChangesColor:
-      - red
+      - "#f38ba8"
   commitLength:
     show: true
   showListFooter: true
