@@ -28,29 +28,29 @@ gui:
     activeBorderColor:
       - green
       - bold
+    cherryPickedCommitBgColor:
+      - cyan
+    cherryPickedCommitFgColor:
+      - blue
+    defaultFgColor:
+      - default
     inactiveBorderColor:
       - default
+    inactiveViewSelectedLineBgColor:
+      - bold
+    markedBaseCommitBgColor:
+      - yellow
+    markedBaseCommitFgColor:
+      - blue
+    optionsTextColor:
+      - blue
     searchingActiveBorderColor:
       - cyan
       - bold
-    optionsTextColor:
-      - blue
     selectedLineBgColor:
       - blue
-    inactiveViewSelectedLineBgColor:
-      - bold
-    cherryPickedCommitFgColor:
-      - blue
-    cherryPickedCommitBgColor:
-      - cyan
-    markedBaseCommitFgColor:
-      - blue
-    markedBaseCommitBgColor:
-      - yellow
     unstagedChangesColor:
       - red
-    defaultFgColor:
-      - default
   commitLength:
     show: true
   showListFooter: true
