@@ -1,10 +1,15 @@
 gui:
   authorColors: {}
   branchColors: {}
+  branchColorPatterns: {}
+  customIcons:
+    filenames: {}
+    extensions: {}
   scrollHeight: 2
   scrollPastBottom: true
   scrollOffMargin: 2
   scrollOffBehavior: margin
+  tabWidth: 4
   mouseEvents: true
   skipDiscardChangeWarning: false
   skipStashWarning: false
@@ -15,33 +20,42 @@ gui:
   expandedSidePanelWeight: 2
   mainPanelSplitMode: flexible
   enlargedSideViewLocation: left
+  wrapLinesInStagingView: true
   language: auto
   timeFormat: 02 Jan 06
   shortTimeFormat: 3:04PM
   theme:
     activeBorderColor:
-      - "#cba6f7"
+      - green
       - bold
     inactiveBorderColor:
-      - "#a6adc8"
-    optionsTextColor:
-      - "#89b4fa"
-    selectedLineBgColor:
-      - "#313244"
-    cherryPickedCommitBgColor:
-      - "#45475a"
-    cherryPickedCommitFgColor:
-      - "#cba6f7"
-    unstagedChangesColor:
-      - "#f38ba8"
-    defaultFgColor:
-      - "#cdd6f4"
+      - default
     searchingActiveBorderColor:
-      - "#f9e2af"
+      - cyan
+      - bold
+    optionsTextColor:
+      - blue
+    selectedLineBgColor:
+      - blue
+    inactiveViewSelectedLineBgColor:
+      - bold
+    cherryPickedCommitFgColor:
+      - blue
+    cherryPickedCommitBgColor:
+      - cyan
+    markedBaseCommitFgColor:
+      - blue
+    markedBaseCommitBgColor:
+      - yellow
+    unstagedChangesColor:
+      - red
+    defaultFgColor:
+      - default
   commitLength:
     show: true
   showListFooter: true
   showFileTree: true
+  showNumstatInFilesView: false
   showRandomTip: true
   showCommandLog: true
   showBottomLine: true
@@ -57,7 +71,7 @@ gui:
   commandLogSize: 8
   splitDiff: auto
   screenMode: normal
-  border: rounded
+  border: single
   animateExplosion: true
   portraitMode: auto
   filterMode: substring
@@ -71,6 +85,7 @@ gui:
   statusPanelView: dashboard
   switchToFilesAfterStashPop: true
   switchToFilesAfterStashApply: true
+  switchTabsWithPanelJumpKeys: false
 git:
   paging:
     colorArg: always
@@ -91,6 +106,7 @@ git:
   skipHookPrefix: WIP
   autoFetch: true
   autoRefresh: true
+  autoForwardBranches: onlyMainBranches
   fetchAll: true
   autoStageResolvedConflicts: true
   branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --
@@ -98,7 +114,7 @@ git:
   allBranchesLogCmds: []
   overrideGpg: false
   disableForcePushing: false
-  commitPrefix: null
+  commitPrefix: []
   commitPrefixes: {}
   branchPrefix: ""
   parseEmoji: false
@@ -137,6 +153,8 @@ keybinding:
     scrollRight: L
     gotoTop: <
     gotoBottom: ">"
+    gotoTop-alt: <home>
+    gotoBottom-alt: <end>
     toggleRangeSelect: v
     rangeSelectDown: <s-down>
     rangeSelectUp: <s-up>
@@ -152,6 +170,7 @@ keybinding:
       - "3"
       - "4"
       - "5"
+    focusMainView: "0"
     nextMatch: "n"
     prevMatch: "N"
     startSearch: /
@@ -218,6 +237,8 @@ keybinding:
     openMergeTool: M
     openStatusFilter: <c-b>
     copyFileInfoToClipboard: "y"
+    collapseAll: "-"
+    expandAll: =
   branches:
     createPullRequest: o
     viewPullRequestOptions: O
@@ -227,6 +248,7 @@ keybinding:
     rebaseBranch: r
     renameBranch: R
     mergeIntoCurrentBranch: M
+    moveCommitsToNewBranch: "N"
     viewGitFlowOptions: i
     fastForward: f
     createTag: T
@@ -261,6 +283,7 @@ keybinding:
     openInBrowser: o
     viewBisectOptions: b
     startInteractiveRebase: i
+    selectCommitsOfCurrentBranch: "*"
   amendAttribute:
     resetAuthor: a
     setAuthor: A
