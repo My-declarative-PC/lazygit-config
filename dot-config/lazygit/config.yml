@@ -1,6 +1,7 @@
 gui:
   authorColors:
-    "*": "#b4befe"
+    "*": "#a6e3a1"
+    "Sitnikov Timofey": "#cba6f7"
   branchColors: {}
   branchColorPatterns: {}
   customIcons:
