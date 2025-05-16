@@ -17,11 +17,11 @@ gui:
   skipStashWarning: false
   skipNoStagedFilesWarning: false
   skipRewordInEditorWarning: false
-  sidePanelWidth: 0.3333
-  expandFocusedSidePanel: false
+  sidePanelWidth: 0.25
+  expandFocusedSidePanel: true
   expandedSidePanelWeight: 2
   mainPanelSplitMode: flexible
-  enlargedSideViewLocation: left
+  enlargedSideViewLocation: top
   wrapLinesInStagingView: true
   language: auto
   timeFormat: 02 Jan 06
@@ -53,40 +53,48 @@ gui:
   showNumstatInFilesView: false
   showRandomTip: true
   showCommandLog: true
-  showBottomLine: true
+  showBottomLine: false
   showPanelJumps: true
   showIcons: false
-  nerdFontsVersion: ""
+  nerdFontsVersion: "3"
   showFileIcons: true
   commitAuthorShortLength: 2
   commitAuthorLongLength: 17
-  commitHashLength: 8
+  commitHashLength: 6
   showBranchCommitHash: false
   showDivergenceFromBaseBranch: none
   commandLogSize: 8
   splitDiff: auto
   screenMode: normal
   border: single
-  animateExplosion: true
+  animateExplosion: false
   portraitMode: auto
   filterMode: substring
   spinner:
     frames:
-      - "|"
-      - /
-      - "-"
-      - \
+      - "⠇"
+      - "⠏"
+      - "⠋"
+      - "⠙"
+      - "⠹"
+      - "⠸"
+      - "⢸"
+      - "⢰"
+      - "⣰"
+      - "⣠"
+      - "⣄"
+      - "⣆"
+      - "⡆"
+      - "⡇"
     rate: 50
-  statusPanelView: dashboard
+  statusPanelView: allBranchesLog
   switchToFilesAfterStashPop: true
   switchToFilesAfterStashApply: true
   switchTabsWithPanelJumpKeys: false
 git:
   paging:
     colorArg: always
-    pager: delta --dark --paging=never --diff-so-fancy
-    useConfig: false
-    externalDiffCommand: ""
+    externalDiffCommand: difft --color=always
   commit:
     signOff: false
     autoWrapCommitMessage: true
