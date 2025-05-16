@@ -112,7 +112,7 @@ git:
   autoForwardBranches: onlyMainBranches
   fetchAll: true
   autoStageResolvedConflicts: true
-  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --
+  branchLogCmd: git log --graph --color=always --pretty="%Cgreen%aN %C(yellow)Hash %h %C(blue)Date %ad (%C(cyan)%cr%Cblue)%n%C(dim italic black reverse) {{branchName}} %Creset%n%C(magenta)Message %Creset%s%n%b" --date=human --
   allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
   allBranchesLogCmds: []
   overrideGpg: false
